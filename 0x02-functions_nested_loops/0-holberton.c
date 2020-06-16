@@ -2,21 +2,19 @@
 
 /**
  * main - Entry point
- *
- * Return: Always 0 (Success)
+ * Desc: Entry
+ * Return: Always 0 (Sucess)
  */
+
 int main(void)
 {
-_putchar('H');
-_putchar('o'); 
-_putchar('l'); 
-_putchar('b'); 
-_putchar('e'); 
-_putchar('r'); 
-_putchar('t'); 
-_putchar('o'); 
-_putchar('n');
-_putchar('\n');
- 
-return (0);
+	int i = 0;
+	char out[9] = {72, 111, 108, 98, 101, 114, 116, 111, 110};
+
+	for (i = 0; i <= 8; ++i)
+	{
+		_putchar(out[i]);
+	}
+	_putchar('\n');
+	return (0);
 }
