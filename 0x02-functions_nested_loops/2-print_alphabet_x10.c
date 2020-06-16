@@ -1,18 +1,16 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_alphabet_x10 - print alphabet 10 times
  */
 void print_alphabet_x10(void)
 {
-int a;
-int i;
-        for (i = 0; i < 10; i++)
+	int c, i;
+
+	for (i = 0; i < 10; i++)
 	{
-        	for (a = 'a'; a <= 'z'; a++)
-        		_putchar(a);
+		for (c = 'a'; c <= 'z'; c++)
+			_putchar(c);
 		_putchar('\n');
 	}
 }
