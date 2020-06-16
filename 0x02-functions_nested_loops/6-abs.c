@@ -1,17 +1,17 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _abs - Valor absolute
  *
- * Return: Always 0.
+ * @n: int is the variable for the program.
+ * Return: Always 0 (Success)
  */
-int _abs(int a)
+int _abs(int n)
 {
-	if ( a > 0 ) 
+	if (n < 0)
 	{
-		return(a);
-	} else {
-		a = a * (-1);
-		return(a);
+		return (n * -1);
 	}
+	return (n);
+
 }

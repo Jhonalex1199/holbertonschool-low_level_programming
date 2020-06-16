@@ -1,16 +1,20 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _isalpha - checks for alphabetic character
+ * @c: character constant to be checked for alphabetic character
  *
- * Return: Always 0.
+ * Return: 1 if c is letter, lower or uppercase; 0 otherwise
  */
 int _isalpha(int c)
 {
-	if ((c>= 'a' && c<= 'z') || (c>= 'A' && c<= 'Z')) {
-	return (1);
-	} 
-	else {
-	return (0);
-	}
+	int is_alpha;
+
+	if (c >= 'a' && c <= 'z')
+		is_alpha = 1;
+	else if (c >= 'A' && c <= 'Z')
+		is_alpha = 1;
+	else
+		is_alpha = 0;
+	return (is_alpha);
 }
