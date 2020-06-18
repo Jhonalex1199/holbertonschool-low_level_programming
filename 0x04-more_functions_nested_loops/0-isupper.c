@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * isupper - check for uppercase character
+ * _isupper - check for uppercase character
+ * @c: letter for uppercase check
  *
- * return: check uppercase
+ * Return: 1 if isupper and 0 isn't isupper
  */
 int _isupper(int c)
 {
@@ -11,7 +12,7 @@ int _isupper(int c)
 
 	if (c >= 'A' && c <= 'Z')
 		isupper = 1;
-	else 
+	else
 		isupper = 0;
 	return (isupper);
 }
