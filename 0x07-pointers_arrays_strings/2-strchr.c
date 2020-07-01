@@ -4,22 +4,16 @@
  * _strchr - prints buffer in hexa
  * @s: buffer
  * @c: buffer2
- *
  * Return: s.
  */
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	while (s[i] != '\0')
+	while (*s != c)
 	{
-		if (s[i] == c)
+		if (!*s++)
 		{
-			s = s + i;
-			return (s);
+			return (0);
 		}
-	i++;
 	}
-	s = 0;
-	return (s);
+		return (s);
 }
