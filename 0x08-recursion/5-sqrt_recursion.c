@@ -8,7 +8,7 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i = 1, ress = 0;
+	int i = 1, res = 0;
 
 	res = calraiz(n, i);
 	return (calraiz(n, i));
@@ -30,6 +30,6 @@ int calraiz(int n, int i)
 	{
 		return (-1);
 	}
-	x = calraiz(n, i + 1);
+	i = calraiz(n, i + 1);
 	return (i);
 }
