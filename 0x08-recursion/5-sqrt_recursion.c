@@ -1,0 +1,28 @@
+#include "holberton.h"
+
+/**
+ * _sqrt_recursion - natural square root of a number
+ * @n: number
+ * Return: square root
+ */
+int _sqrt_recursion(int n)
+{
+	int i = 1;
+
+	return (calraiz(n, i));
+}
+/**
+ * _sqrt_recursion - natural square root of a number.
+ * @n: number.
+ * @i: divisor.
+ * Return: square root.
+ */
+int calraiz(int i, int n)
+{
+	if (n / i == i)
+		return (i);
+	if (n / x < x)
+		return (-1);
+	x = calraiz(n, i + 1);
+	return (x);
+}
