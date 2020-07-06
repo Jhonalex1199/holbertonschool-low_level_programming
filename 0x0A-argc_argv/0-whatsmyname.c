@@ -2,9 +2,10 @@
 #include "stdio.h"
 
 /**
- *
- *
- *
+ * main - print the name fuction.
+ * @argc: string.
+ * @argv: pointers.
+ * Return: 0.
  */
 int main(int argc, char **argv)
 {
