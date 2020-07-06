@@ -12,10 +12,13 @@ int main(int argc, char **argv)
 	int i = 0;
 
 	while (i < argc)
+	{
 		if (i + 1 == argc)
 		{
 			printf("%i\n", i);
 		}
 	i++;
-	return(0);
+	}
+	(void)argv;
+	return (0);
 }
