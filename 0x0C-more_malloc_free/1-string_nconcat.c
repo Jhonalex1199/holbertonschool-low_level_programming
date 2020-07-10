@@ -42,10 +42,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[x] = s1[x];
 		x++;
 	}
-	while (y < n)
+	for (y = 0; y < n; y++)
 	{
 		p[x++] = s2[y];
-		y++;
 	}
 	p[x++] = '\0';
 	return (p);
