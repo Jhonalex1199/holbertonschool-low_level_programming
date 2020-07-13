@@ -1,8 +1,0 @@
-#!/bin/bash
-echo "file name"
-read NF
-touch $NF
-BIN="#!/bin/bash"
-echo $BIN >> $NF
-chmod u+x $NF
-vi $NF

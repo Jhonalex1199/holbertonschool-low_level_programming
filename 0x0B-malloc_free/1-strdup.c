@@ -26,10 +26,10 @@ char *_strdup(char *str)
 	{
 		return (0);
 	}
-
-	for (j = 0; j < i; j++)
+	while (j < i)
 	{
 		p[j] = str[j];
+		j++;
 	}
 	return (p);
 }
