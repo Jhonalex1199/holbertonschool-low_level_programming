@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* name - print the name compiler
+* main - print the name compiler
 * Return: 0.
 */
 int main(void)
