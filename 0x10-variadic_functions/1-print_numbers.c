@@ -11,8 +11,8 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
-
 	va_list p_args;
+
 	va_start(p_args, n);
 
 	if (separator == NULL)
