@@ -1,0 +1,1 @@
+description about variadic functionsdescription about variadic functions
