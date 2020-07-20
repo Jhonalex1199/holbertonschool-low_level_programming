@@ -1,77 +1,77 @@
-#include "variadic_functions.h"
+nclude"variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-
 /**
- * p_char - print character.
- * @form: name va_list.
+ * prin_char - print char.
+ * @list: char to print.
  */
-void p_char(va_list form)
+void prin_char(va_list list)
 {
-	printf("%c", va_arg(form, int));
+	printf("%c", va_arg(list, int));
 }
-
 /**
- * p_int - print integer.
- * @form: name va_list.
+ * prin_integer - print integer.
+ * @list: int to print.
  */
-void p_int(va_list form)
+void prin_integer(va_list list)
 {
-	printf("%i", va_arg(form, int));
+	printf("%d", va_arg(list, int));
 }
-
 /**
- * p_float - print float numbers.
- * @form: name of va_list.
+ * prin_float - print float.
+ * @list: float to print.
  */
-void p_float(va_list form)
+void prin_float(va_list list)
 {
-	printf("%f", va_arg(form, double));
+	printf("%f", va_arg(list, double));
 }
-
 /**
- * p_string - print string.
- * @form: name va_list.
+ * prin_string - print string.
+ * @list: string to print.
  */
-void p_string(va_list form)
+void prin_string(va_list list)
 {
-	char *str;
+	char *ptr;
 
-	str = va_arg(form, char *);
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", str);
+	ptr = va_arg(list, char *);
+	if (ptr == NULL)
+		ptr = "(nil)";
+	printf("%s", ptr);
 }
-
 /**
-*print_all - print anything.
-*@format: format.
-*/
+ * print_all - print all.
+ * @format: ist of types of arguments.
+ */
 void print_all(const char * const format, ...)
 {
-	va_list panything;
-	va_start(panything, format);
-	int count = 0, count2 = 0, i = 0;
-	ultra array[] = {
-	{'c', p_char},
-	{'i', p_int},
-	{'f', p_float},
-	{'s', p_string},
+	va_list list;
+	prin_t direc[] = {
+		{"c", prin_char},
+		{"i", prin_integer},
+		{"f", prin_float},
+		{"s", prin_string},
+		{NULL, NULL}
 	};
+	int i = 0, j;
+	char *separator = "";
 
-	while (count2 <= format)
+	va_start(list, format);
+while (format != NULL && format[i] != '\0')
+{
+	j = 0;
+	while (j < 4)
 	{
-		while (count <= 3)
+		if (format[i] == *(direc[j].data))
 		{
-			if (array[count].s == (*format))
-			{
-			return (array[count].f);
-			}
-		count++;
+			printf("%s", separator);
+			direc[j].fun(list);
+			separator = ", ";
+			break;
 		}
-	count2++;
+		j++;
 	}
+	i++;
+}
+printf("\n");
+va_end(list);
 }
