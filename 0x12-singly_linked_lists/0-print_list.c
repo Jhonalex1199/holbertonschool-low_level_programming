@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * print_lists - print all elements.
+ * print_list - print all elements.
  * @h: list name.
  * Return: all elements.
  */
