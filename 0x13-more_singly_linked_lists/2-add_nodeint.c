@@ -3,7 +3,6 @@
 #include <string.h>
 #include <stdio.h>
 
-
 /**
  * add_nodeint - add nodes.
  * @head: name of the list
