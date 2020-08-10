@@ -4,10 +4,10 @@
 #include <unistd.h>
 
 /**
- * read_textfile - Function that creates a file.
- * @filename: file name.
- * @letters: # of letters it should read and print.
- * Return: char.
+ * read_textfile - Function that reads a text file and prints.
+ *@filename: File name.
+ *@letters: Number of latters.
+ *Return: Result.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -23,15 +23,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * letters);
 
-    if (buffer == NULL)
-         return (0);
-    letters2 = read(fd, buffer, letters);
-    
+	if (buffer == NULL)
+		return (0);
+
+	letters2 = read(fd, buffer, letters);
+
 	if (write(STDOUT_FILENO, buffer, letters2) != letters2)
-            return (0);
+		return (0);
 
-    free(buffer);
-    close(fd);
+	free(buffer);
+	close(fd);
 
-	return (letters2);
+return (letters2);
 }
