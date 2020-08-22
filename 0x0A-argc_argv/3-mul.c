@@ -1,23 +1,24 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - print buffer.
+ * main - multiplies n.
  * @argc: argc.
  * @argv: argv.
  * Return: 0.
  */
-int main(int argc, char **argv)
+int main(__attribute__((unused)) int argc,
+__attribute__((unused)) char *argv[])
 {
-	int i, n1 = 0, n1 = 0;
-
-	if (argc != 3)
+	if (argc == 3)
+	{
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		return (0);
+	}
+	else
+	{
 		printf("Error\n");
 		return (1);
-	else
-		n1 = atoi(argv[1]);
-		n2 = atoi(argv[2]);
-		i = ((n1) * (n2));
-		printf("%d\n", i);
-		return (0);
+	}
 }
