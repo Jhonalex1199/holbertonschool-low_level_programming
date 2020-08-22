@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * main - The main function.
