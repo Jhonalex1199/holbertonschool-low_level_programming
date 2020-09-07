@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * sum_dlistint - function that returns the sum of all the data (n) of a
+ * delete_dnodeint_at_index - function that returns the sum of all the data.
  * dlistint_t linked list.
  * @head: input of a list.
+ * @index: index.
  * Return: the sum of the list
  */
 
@@ -21,7 +22,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		i++;
 	}
 	if (tmp == NULL)
-		return(-1);
+		return (-1);
 	if (tmp == *head)
 	{
 		delete = tmp;
@@ -47,5 +48,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		p->prev = tmp;
 	}
 	free(delete);
-	return(1);
+	return (1);
 }
