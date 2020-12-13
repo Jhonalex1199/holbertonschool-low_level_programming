@@ -1,20 +1,26 @@
 #include "lists.h"
 
 /**
- * print_dlistint - function that prints all the elements.
+ * print_dlistint - Prints all the elements.
  * @h: node.
- * Return: i.
+ * Return: # de nodos.
 */
 size_t print_dlistint(const dlistint_t *h)
 {
-	const dlistint_t *tmp = h;
-	size_t i = 0;
+	int i = 0;
 
-	while (tmp)
+	if(h != NULL)
 	{
-		printf("%d\n", tmp->n);
-		tmp = tmp->next;
-		i++;
+		while(h != NULL)
+		{
+			printf("%d \n", h->n);
+			h = h->next;
+			i++;
+		}
+	} 
+	else
+	{
+		return(EXIT_FAILURE);
 	}
-	return (i);
+	return(i);
 }
